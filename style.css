@@ -108,6 +108,7 @@
     display: grid;
     grid-template-columns: 0.7fr 1fr;
     grid-row: inherit;
+    counter-reset: num 0;
 }
 
 .add_1-title {
@@ -182,4 +183,10 @@
     background: #fff;
     color: #0C0C0C;
     border: none;
+}
+
+.wrapper .wrapper_text:before {
+    counter-increment: num;
+    content: counter(num)'. ';
+
 }
